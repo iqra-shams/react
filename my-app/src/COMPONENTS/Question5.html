@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+           
+    
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>Date of Birth</label>
+            <input type="date" id="db">
+            <input type="button" onclick="cal()" value="Calculator">
+        </form>
+        <p id="q"></p>
+        <script>
+            function cal(){
+var dat= document.getElementById("db").value;
+var m= new Date(dat);
+var y= m.getFullYear();
+var mo=m.getMonth();
+var da =m.getDate();
+var now = new Date();  
+var cy=now.getFullYear();
+var cmo= now.getMonth();
+var cda = now.getDate();
+var year= cy-y;
+var month=cmo-mo;
+var day= cda-da;
+// alert(y);
+// alert(mo);
+// alert(da);
+// alert(cy);
+// alert(cmo);
+// alert(cda);
+// alert(year,",",month,",",day);
+document.getElementById("q").innerHTML= year+" years " + month+" months "+day+" days ";    
+            }
+           
+        </script>
+    </body>
+</html>

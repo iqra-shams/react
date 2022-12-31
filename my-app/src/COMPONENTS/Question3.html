@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+           
+    
+        </script>
+    </head>
+    <body>
+        <p id="q"></p>
+        <script>
+          var sum=0;
+          
+             var n=prompt("enter a number greater than five digit ");
+             
+             var d= new Array();
+           if(n>=100000){
+          n1=  n.toString().length;
+       
+         
+            for(var j=0;j<n1-1;j++){
+                nd=n;
+             n=parseInt(n/10);
+            var r =nd%10;
+            if(r%2==1){
+               
+             d[j]=r;
+            }
+            else{
+                d[j]=0; 
+            }
+            }
+            if(n%2==1){
+            d[j]=n;
+            }
+            else{
+                d[j]=0;
+            }
+           
+          for(var i=0;i<d.length;i++){
+           
+             var sum= sum+d[i];
+          }
+          document.getElementById("q").innerHTML= "Sum = " + sum;
+          }
+// var d1=parseInt(n/100);
+// var r1=n%100;
+// var d2=parseInt(r1/10);
+// var d3=r1%10;
+// var ar=(d1*d1*d1)+(d2*d2*d2)+(d3*d3*d3);
+
+// if(ar==n){
+//     document.getElementById("q").innerHTML="It is an Armstrong number";
+// }
+// else{
+//     document.getElementById("q").innerHTML="It is not an Armstrong number"; 
+// }
+     
+           else{
+            document.getElementById("q").innerHTML="Enter a number greater than five digits";
+           } 
+        </script>
+    </body>
+</html>
